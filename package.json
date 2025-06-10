@@ -1,0 +1,12 @@
+{
+  "name": "cypress-data-ingest-board",
+  "version": "1.0.0",
+  "description": "Cypress Tests for the Data Ingest Board",
+  "author": "dbmi.pitt.edu",
+  "scripts": {
+    "start": "npx cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^14.4.1"
+  }
+}
