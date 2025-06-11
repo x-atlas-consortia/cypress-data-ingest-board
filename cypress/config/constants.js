@@ -4,7 +4,8 @@ const MSGS = {
 
 const SEL = {
     switchBtn: '.js-gtm--btn-cta-switch',
-    entityDropdown: '.js-gtm--btn-cta-entityDropdown'
+    entityDropdown: '.js-gtm--btn-cta-entityDropdown',
+    bulk: '.c-table--header .ant-dropdown-trigger'
 }
 
 const URLS = {
@@ -22,6 +23,9 @@ const WAIT = {
 const DATA = {
     uploads: {
         reorganized: 'SNT775.JZRF.852'
+    },
+    datasets: {
+        rnaSeq: 'SNT538.NMNT.483'
     }
 }
 

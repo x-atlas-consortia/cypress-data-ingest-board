@@ -24,7 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import './auth'
-import {WAIT} from "../config/constants";
+import {SEL, WAIT} from "../config/constants";
 
 Cypress.Commands.add('interceptProtocols', () => {
     // Intercept the jsonp requests to protocols made that triggers 'unexpected' while running in cypress
@@ -49,7 +49,7 @@ Cypress.Commands.add('appFilter', (filter, keyword) => {
 })
 
 Cypress.Commands.add('download', (filename, sel = '.js-gtm--btn-cta-csvDownload') => {
-    cy.get('.c-table--header .ant-dropdown-trigger').click()
+    cy.get(SEL.bulk).click()
     cy.get(sel).click()
     cy.wait(WAIT.time * 2)
     cy.readFile(`cypress/downloads/${filename}`)
