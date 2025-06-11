@@ -37,3 +37,13 @@ Cypress.Commands.add('search', (keyword) => {
     cy.get('#appSearch').clear().type(`${keyword}{enter}`)
 })
 
+/**
+ * @param filter
+ */
+Cypress.Commands.add('appFilter', (filter, keyword) => {
+    cy.get(`[aria-label="${filter}"] .anticon.anticon-filter`).as('filterMenu')
+    cy.get('@filterMenu').click()
+    cy.get('.ant-dropdown-menu-item').contains(keyword).click()
+    cy.get('.ant-btn-primary').contains('OK').click()
+})
+

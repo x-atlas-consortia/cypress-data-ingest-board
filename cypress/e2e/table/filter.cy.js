@@ -8,15 +8,11 @@ describe(`${MSGS.name}.Table.Filter`, () => {
     })
 
     it('Can filter', () => {
-        cy.get('[aria-label="Status"] .anticon.anticon-filter').as('filterMenu')
-        cy.get('@filterMenu').click()
-        cy.get('.ant-dropdown-menu-item').contains('New').click()
-        cy.get('.ant-btn-primary').contains('OK').click()
+        cy.appFilter( 'Status', 'New')
+
         cy.get('.c-badge').each(($el, index, $list) => {
             $el.hasClass('.c-badge--new')
         })
-        //cy.wait(WAIT.time)
-
 
     })
 })
