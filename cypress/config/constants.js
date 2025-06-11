@@ -3,7 +3,8 @@ const MSGS = {
 }
 
 const SEL = {
-    switchBtn: '.js-gtm--btn-cta-switch'
+    switchBtn: '.js-gtm--btn-cta-switch',
+    entityDropdown: '.js-gtm--btn-cta-entityDropdown'
 }
 
 const URLS = {
@@ -18,5 +19,11 @@ const WAIT = {
     time: Cypress.env('wait_time') || 1000
 }
 
+const DATA = {
+    uploads: {
+        reorganized: 'SNT775.JZRF.852'
+    }
+}
 
-export { URLS, WAIT, PATHS, MSGS, SEL }
+
+export { URLS, WAIT, PATHS, MSGS, SEL, DATA }

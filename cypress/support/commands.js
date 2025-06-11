@@ -32,3 +32,8 @@ Cypress.Commands.add('interceptProtocols', () => {
         req.url = randomJsonForNoError
     })
 })
+
+Cypress.Commands.add('search', (keyword) => {
+    cy.get('#appSearch').clear().type(`${keyword}{enter}`)
+})
+
