@@ -4,7 +4,9 @@
   "description": "Cypress Tests for the Data Ingest Board",
   "author": "dbmi.pitt.edu",
   "scripts": {
-    "start": "npx cypress run"
+    "start": "npx cypress run",
+    "cli": "cypress run",
+    "gui": "npx cypress open"
   },
   "devDependencies": {
     "cypress": "^14.4.1"
