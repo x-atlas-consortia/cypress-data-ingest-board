@@ -12,7 +12,7 @@ describe(`${MSGS.name}.Bulk.Edit`, () => {
         cy.search(DATA.datasets.rnaSeq)
         cy.get(`[data-row-key="${DATA.datasets.rnaSeq}"] [type="checkbox"]`).click()
         cy.get(SEL.bulk).click()
-        cy.get(SEL.bulkMenuItem).contains('Bulk Edit').click()
+        cy.get(SEL.bulkEdit).contains('Bulk Edit').click()
         cy.get('#validateOnly_ingest_task').type(`Cypress generated test task ${new Date().toLocaleDateString()}`)
         cy.get('.ant-btn-primary').contains('Submit').click()
         cy.get('.ant-modal').should('have.length', 1)

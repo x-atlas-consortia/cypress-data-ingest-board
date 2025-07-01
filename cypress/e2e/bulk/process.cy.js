@@ -16,7 +16,7 @@ describe(`${MSGS.name}.Bulk.Process`, () => {
 
         // now bulk
         cy.get(SEL.bulk).click()
-        cy.get(SEL.bulkMenuItem).contains('Submit For Processing').click()
+        cy.get(SEL.bulkProcess).contains('Submit For Processing').click()
 
         //remove from list
         cy.get(`[data-row-key="${DATA.datasets.tenX}"] .anticon-close`).click()

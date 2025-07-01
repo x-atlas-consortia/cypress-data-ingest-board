@@ -1,4 +1,4 @@
-import {DATA, MSGS, PATHS, SEL} from "../../config/constants";
+import {DATA, MSGS, PATHS, SEL, WAIT} from "../../config/constants";
 
 describe(`${MSGS.name}.Bulk.Validate`, () => {
 
