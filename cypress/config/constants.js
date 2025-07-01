@@ -6,7 +6,8 @@ const SEL = {
     switchBtn: '.js-gtm--btn-cta-switch',
     entityDropdown: '.js-gtm--btn-cta-entityDropdown',
     bulk: '.c-table--header .ant-dropdown-trigger',
-    bulkMenuItem: '.anticon-thunderbolt ~ .ant-dropdown-menu-title-content'
+    bulkMenuItem: '.anticon-thunderbolt ~ .ant-dropdown-menu-title-content',
+    bulkValidate: '.anticon-bug + .ant-dropdown-menu-title-content',
 }
 
 const URLS = {
