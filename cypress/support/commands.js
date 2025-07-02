@@ -57,3 +57,17 @@ Cypress.Commands.add('download', (filename, sel = '.js-gtm--btn-cta-csvDownload'
 
 })
 
+Cypress.Commands.add('sort', (id,  className, checkClass, checkText, upto = 5) => {
+    cy.get(`th${id}`).click()
+
+    cy.get(className).each(($el, index, $list) => {
+        if (index < upto) {
+            if (checkClass) {
+                $el.hasClass(checkClass)
+            } else {
+                cy.get(className).eq(index).contains(checkText)
+            }
+        }
+
+    })
+})

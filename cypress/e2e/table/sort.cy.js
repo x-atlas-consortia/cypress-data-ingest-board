@@ -7,12 +7,19 @@ describe(`${MSGS.name}.Table.Sort`, () => {
         cy.visit(PATHS.home)
     })
 
-    it('Can Sort', () => {
-        cy.get('#status').click()
-
-        cy.get('.c-badge').each(($el, index, $list) => {
-            $el.hasClass('.c-badge--error')
-        })
-
+    it('Can Sort.Status', () => {
+        cy.sort('#status', '.c-badge', '.c-badge--error')
     })
+
+    it('Can Sort.Dataset Type', () => {
+        cy.sort('#dataset_type', '.field-dataset_type', null, 'Visium (with probes)')
+    })
+
+    it('Can Sort.Status Upload', () => {
+        cy.get(SEL.switchBtn).contains('SWITCH TO UPLOADS').click()
+        cy.wait(WAIT.time)
+        cy.sort('#group_name', 'td#group_name .txt-break-spaces', null, 'CODCC', 4)
+    })
+
+
 })
