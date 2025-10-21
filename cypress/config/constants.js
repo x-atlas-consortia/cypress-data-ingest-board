@@ -17,6 +17,7 @@ const URLS = {
 
 const PATHS = {
     home: URLS.domain,
+    logs: URLS.domain + '/logs'
 }
 
 const WAIT = {
