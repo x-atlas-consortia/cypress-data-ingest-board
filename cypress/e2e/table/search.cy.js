@@ -11,7 +11,8 @@ describe(`${MSGS.name}.Table.Search`, () => {
         cy.get(SEL.switchBtn).click()
         cy.search(DATA.uploads.reorganized)
         cy.get(SEL.entityDropdown).contains(DATA.uploads.reorganized).click()
-        cy.get('.ant-btn').contains('Show Datasets').click()
+        cy.wait(WAIT.time)
+        cy.get('.ant-dropdown-menu-title-content .ant-btn span').contains('Show Datasets').click()
         cy.wait(WAIT.time)
         cy.get('.ant-table-row').should('have.length', 3)
 

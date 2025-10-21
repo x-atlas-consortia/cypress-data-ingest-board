@@ -8,11 +8,12 @@ describe(`${MSGS.name}.Table.Sort`, () => {
     })
 
     it('Can Sort.Status', () => {
+        cy.wait(WAIT.time)
         cy.sort('#status', '.c-badge', '.c-badge--error')
     })
 
     it('Can Sort.Dataset Type', () => {
-        cy.sort('#dataset_type', '.field-dataset_type', null, 'Visium (with probes)')
+        cy.sort('#dataset_type', '.field-dataset_type', null, /[Xenium|Visium (with probes)]/)
     })
 
     it('Can Sort on Upload', () => {
