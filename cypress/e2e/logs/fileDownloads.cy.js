@@ -13,7 +13,7 @@ describe(`${MSGS.name}.Logs.Files`, () => {
 
     it('Filters table', () => {
         let t = 'fileDownloads'
-        cy.logsSearchFilter(t, 'SNT693.DVRR.852')
+        cy.logsSearchFilter(t, 'SNT524.RZZR.888')
     })
 
     it('Loads by Dataset Type modal', () => {
@@ -21,6 +21,6 @@ describe(`${MSGS.name}.Logs.Files`, () => {
         cy.get('@tableOpsMenu').click()
         cy.get('.ant-dropdown-menu-title-content').contains('View By Dataset Type').click()
         cy.get('.ant-modal-body h4').contains('Downloaded Datasets by Dataset Type')
-        cy.get('#c-visualizations__bar--filesByTypes svg .bar--LC-MS').should('have.length', 1)
+        cy.get('#c-visualizations__bar--filesByTypes svg .bar--histology').should('have.length', 1)
     })
 })

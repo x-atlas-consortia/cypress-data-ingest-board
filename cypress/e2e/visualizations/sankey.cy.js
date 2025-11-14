@@ -13,7 +13,7 @@ describe(`${MSGS.name}.Visualizations.Sankey`, () => {
             cy.wrap($el).contains(/^Lung*/)
         })
 
-        cy.get('.js-btn--viewSankey').invoke('removeAttr', 'target').click()
+        cy.get('.js-gtm--btn-cta-viewSankey').invoke('removeAttr', 'target').click()
         cy.url()
             .should('include', '/sankey')
 
