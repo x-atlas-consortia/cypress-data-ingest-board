@@ -9,6 +9,7 @@
     "gui": "npx cypress open"
   },
   "devDependencies": {
-    "cypress": "^14.4.1"
+    "cypress": "^14.4.1",
+    "cypress-iframe": "^1.0.1"
   }
 }
