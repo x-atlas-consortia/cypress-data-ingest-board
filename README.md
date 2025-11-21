@@ -8,7 +8,10 @@ npm i .
 cp example.cypress.env.json cypress.env.json
 ```
 
-Update the values in `cypress.env.json`. You can obtain a `token` via your user menu while logged into the Data Ingest Board. For `displayName`, use the value of the email address associated with the token.  
+### Updating the values in `cypress.env.json`
+You can obtain a Globus `token` via your user menu while logged into the Data Ingest Board.  
+For `displayName`, use the value of the email address associated with the token.  
+`domain` can either be your local setup of the app or more commonly, either https://ingest-board.dev.sennetconsortium.org/ or https://ingest-board.dev.hubmapconsortium.org/ depending on your `token`
 
 ### Optional
 `username` and `password` corresponds to your https://www.globusid.org/login account. You will not need them unless to run/write certain tests.
