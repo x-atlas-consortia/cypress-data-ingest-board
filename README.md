@@ -19,11 +19,11 @@ cp example.cypress.env.json cypress.env.json
 ## Running tests
 To run tests via the command line, run:
 ```
+npm start or
 npm run cli
 ```
 
 Otherwise, via the GUI:
 ```
-npm start or
 npm run gui
 ```
