@@ -27,7 +27,7 @@ describe(`${MSGS.name}.Usage.GA`, () => {
             // Interact with elements inside the iframe
             cy.iframe('.ant-layout iframe').within(() => {
 
-            cy.wait(2000)
+            cy.wait(WAIT.time * 2)
             //cy.get('ng2-date-range-picker button').click()
             cy.contains('Active users').should('be.visible')
             cy.contains('Export to PDF').should('be.visible')

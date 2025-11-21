@@ -21,7 +21,7 @@ describe(`${MSGS.name}.Bulk.Validate`, () => {
         //remove from list
         cy.get(`[data-row-key="${DATA.datasets.tenX}"] .anticon-close`).click()
 
-        cy.wait(1000)
+        cy.wait(WAIT.time)
         cy.get('.ant-modal-footer .ant-btn-primary span').contains('Submit').click()
         cy.get('.ant-modal').should('have.length', 1)
 
