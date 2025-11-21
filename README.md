@@ -2,7 +2,7 @@
 
 ## Setup
 
-You need to have node installed on your machine. Then after.
+You need to have node installed on your machine. Then after:
 ```
 npm i .
 cp example.cypress.env.json cypress.env.json
