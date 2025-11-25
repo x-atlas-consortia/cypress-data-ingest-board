@@ -8,7 +8,7 @@ describe(`${MSGS.name}.Logs.Files`, () => {
     })
 
     it('Loads overview cards', () => {
-        cy.get('.ant-card-head-title').should('have.length', 3)
+        cy.get('.ant-card-head-title', WAIT.timeout).should('have.length', 3)
     })
 
     it('Filters table', () => {
@@ -17,10 +17,11 @@ describe(`${MSGS.name}.Logs.Files`, () => {
     })
 
     it('Loads by Dataset Type modal', () => {
-        cy.get('.ant-tabs-extra-content .ant-dropdown-trigger').as('tableOpsMenu')
+        cy.get('.ant-tabs-extra-content .ant-dropdown-trigger', WAIT.timeout).as('tableOpsMenu')
         cy.get('@tableOpsMenu').click()
-        cy.get('.ant-dropdown-menu-title-content').contains('View By Dataset Type').click()
-        cy.get('.ant-modal-body h4').contains('Downloaded Datasets by Dataset Type')
-        cy.get('#c-visualizations__bar--filesByTypes svg .bar--histology').should('have.length', 1)
+        cy.get('.ant-dropdown-menu-title-content', WAIT.timeout).contains('View By Dataset Type').click()
+        cy.wait(WAIT.time * 3)
+        cy.get('.ant-modal-body h4', WAIT.timeout).contains('Downloaded Datasets by Dataset Type')
+        cy.get('#c-visualizations__bar--filesByTypes svg .bar--histology', WAIT.timeout).should('have.length', 1)
     })
 })

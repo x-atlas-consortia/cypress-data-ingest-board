@@ -21,7 +21,8 @@ const PATHS = {
 }
 
 const WAIT = {
-    time: Cypress.env('wait_time') || 1000
+    time: Cypress.env('wait_time') || 1000,
+    timeout: {timeout: 7 * 1000}
 }
 
 const DATA = {

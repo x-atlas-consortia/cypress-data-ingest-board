@@ -5,7 +5,7 @@
   "author": "dbmi.pitt.edu",
   "scripts": {
     "start": "npx cypress run",
-    "cli": "cypress run",
+    "cli": "cypress run --browser chrome",
     "gui": "npx cypress open"
   },
   "devDependencies": {
